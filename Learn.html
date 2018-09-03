@@ -1,0 +1,283 @@
+<link rel="stylesheet" href="Learn.css">
+
+<html>
+  <header id = "header">
+  <nav id="nav-bar"> 
+<header id = "header">C++ Documentation </header>
+<img id = "header-img" src = "https://image.flaticon.com/icons/svg/74/74897.svg">
+
+  <ul> 
+    <a class="nav-link" href="#sec1" rel="internal"><li>Watch Introduction Video</li></a>
+    <a class="nav-link" href="#sec2" rel="internal"><li>Compiler</li></a>
+    <a class="nav-link" href="#sec3" rel="internal"><li>Structure of a program
+</li></a>
+    <a class="nav-link" href="#sec4" rel="internal"><li>Variables</li></a>
+    <a class="nav-link" href="#sec5" rel="internal"><li>Initialization vs. assignment</li></a>
+    <a class="nav-link" href="#sec6" rel="internal"><li>Uninitialized variables</li></a>
+    <a class="nav-link" href="#sec7" rel="internal"><li>Variable scope</li></a>
+    <a class="nav-link" href="#sec8" rel="internal"><li>Form
+      </li></a>        
+    
+      </ul>
+</nav> 
+
+  </header>
+<main id = "main-doc"> 
+<section id ="sec1"class = "main-section">
+
+  <iframe id = "video" src="https://www.youtube.com/embed/kJkB_Tggk8U" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  
+  </section> 
+  
+<section id = "sec2"class = "main-section" >
+  
+  <h1 class = "section-header">Compilers</h1>
+  <hr class = "section-hr">
+  
+  <p class = "section-p">The essential tools needed to follow these tutorials are a computer and a compiler toolchain able to compile C++ code and build the programs to run on it. </p>
+
+<p class = "section-p">C++ is a language that has evolved much over the years, and these tutorials explain many features added recently to the language. Therefore, in order to properly follow the tutorials, a recent compiler is needed. It shall support (even if only partially) the features introduced by the 2011 standard.
+</p>
+  
+  <h3 class = "header-3">What is a compiler?</h3>
+  
+  <p class = "section-p">Computers understand only one language and that language consists of sets of instructions made of ones and zeros. This computer language is appropriately called machine language.</p>
+  
+  <p class = "section-p">Because a computer can only understand machine language and humans wish to write in high level languages high level languages have to be re-written (translated) into machine language at some point. This is done by special programs called compilers, interpreters, or assemblers that are built into the various programming applications. </p>
+
+<p class = "section-p">C++ is designed to be a compiled language, meaning that it is generally translated into machine language that can be understood directly by the system, making the generated program highly efficient. For that, a set of tools are needed, known as the development toolchain, whose core are a compiler and its linker.</p>
+  
+  </section>
+
+<section id= "sec3" class = "main-section">
+  
+  <h1 class = "section-header">Structure of a Program</h1>
+  <hr class = "section-hr">
+   
+  <p class = "section-p">The best way to learn a programming language is by writing programs. Typically, the first program beginners write is a program called "Hello World", which simply prints "Hello World" to your computer screen. Although it is very simple, it contains all the fundamental components C++ programs have: </p>
+  
+  <section class = "box-container">
+    <section class = "section-1">
+    // my first program in C++ <br>
+    #include < "iostream" > <br>
+
+    int main() <br>
+    { <br>
+    std::cout << "Hello World!"; <br>
+  } <br>
+      </section>
+    
+    <section class = "section-2">Hello World!</section>
+  </section>  
+    <p class = "section-p">The left panel above shows the C++ code for this program. The right panel shows the result when the program is executed by a computer. The grey numbers to the left of the panels are line numbers to make discussing programs and researching errors easier. They are not part of the program. </p> 
+    
+  <p class = "section-p">  
+  Let's examine this program line by line: <br> <br> 
+  Line 1: // my first program in C++ <br> <br>
+
+Two slash signs indicate that the rest of the line is a comment inserted by the programmer but which has no effect on the behavior of the program. Programmers use them to include short explanations or observations concerning the code or program. In this case, it is a brief introductory description of the program. <br> <br>
+
+Line 2: #include < "iostream" > <br> <br>
+Lines beginning with a hash sign (#) are directives read and interpreted by what is known as the preprocessor. They are special lines interpreted before the compilation of the program itself begins. In this case, the directive #include < "iostream" >, instructs the preprocessor to include a section of standard C++ code, known as header iostream, that allows to perform standard input and output operations, such as writing the output of this program (Hello World) to the screen. <br> <br>
+
+Line 3: A blank line. <br> <br>
+Blank lines have no effect on a program. They simply improve readability of the code. <br> <br>
+
+Line 4: int main () <br> <br>
+This line initiates the declaration of a function. Essentially, a function is a group of code statements which are given a name: in this case, this gives the name "main" to the group of code statements that follow. Functions will be discussed in detail in a later chapter, but essentially, their definition is introduced with a succession of a type (int), a name (main) and a pair of parentheses (()), optionally including parameters. <br> <br>
+
+The function named main is a special function in all C++ programs; it is the function called when the program is run. The execution of all C++ programs begins with the main function, regardless of where the function is actually located within the code. <br> <br>
+
+Lines 5 and 7: { and } <br> <br>
+The open brace ({) at line 5 indicates the beginning of main's function definition, and the closing brace (}) at line 7, indicates its end. Everything between these braces is the function's body that defines what happens when main is called. All functions use braces to indicate the beginning and end of their definitions. <br> <br>
+
+Line 6: std::cout << "Hello World!"; <br> <br>
+This line is a C++ statement. A statement is an expression that can actually produce some effect. It is the meat of a program, specifying its actual behavior. Statements are executed in the same order that they appear within a function's body. <br> <br>
+
+This statement has three parts: First, std::cout, which identifies the standard character output device (usually, this is the computer screen). Second, the insertion operator (<<), which indicates that what follows is inserted into std::cout. Finally, a sentence within quotes ("Hello world!"), is the content inserted into the standard output. <br> <br>
+
+Notice that the statement ends with a semicolon (;). This character marks the end of the statement, just as the period ends a sentence in English. All C++ statements must end with a semicolon character. One of the most common syntax errors in C++ is forgetting to end a statement with a semicolon. <br> <br>
+
+You may have noticed that not all the lines of this program perform actions when the code is executed. There is a line containing a comment (beginning with //). There is a line with a directive for the preprocessor (beginning with #). There is a line that defines a function (in this case, the main function). And, finally, a line with a statements ending with a semicolon (the insertion into cout), which was within the block delimited by the braces ( { } ) of the main function. <br> <br>
+
+The program has been structured in different lines and properly indented, in order to make it easier to understand for the humans reading it. But C++ does not have strict rules on indentation or on how to split instructions in different lines. For example, instead of <br> <br>
+  </p>
+<section class = "box-container">
+    <section class = "section-1"> 
+      int main () <br>
+{ <br>
+  std::cout << " Hello World!"; <br>
+} <br> 
+  </section> 
+  </section> <br>
+  <p class = "section-p">We could have written:
+ 
+int main () { std::cout << "Hello World!"; } <br> <br>
+  
+all in a single line, and this would have had exactly the same meaning as the preceding code. <br><br>
+
+In C++, the separation between statements is specified with an ending semicolon (;), with the separation into different lines not mattering at all for this purpose. Many statements can be written in a single line, or each statement can be in its own line. The division of code in different lines serves only to make it more legible and schematic for the humans that may read it, but has no effect on the actual behavior of the program. <br><br>
+
+Now, let's add an additional statement to our first program: </p>
+  
+    <section class = "box-container">
+    <section class = "section-1">
+      <p>
+      // my second program in C++
+#include < "iostream" > <br>
+
+int main () <br>
+{ <br>
+  std::cout << "Hello World! "; <br>
+  std::cout << "I'm a C++ program"; <br>
+} </p>
+      </section>
+    
+    <section class = "section-2">Hello World! I'm a C++ program
+  </section>
+  </section>
+   <p class = "section-p"> In this case, the program performed two insertions into std::cout in two different statements. Once again, the separation in different lines of code simply gives greater readability to the program, since main could have been perfectly valid defined in this way: <br> <br> 
+     
+int main () { std::cout << " Hello World! "; std::cout << " I'm a C++ program "; } <br><br> 
+     
+ The source code could have also been divided into more code lines instead: <br><br> 
+     </p>
+<section class = "box-container">
+    <section class = "section-1"> 
+    <p>int main () <br>
+{ <br>
+  std::cout << <br>
+    "Hello World!"; <br>
+  std::cout <br>
+    << "I'm a C++ program"; <br>
+} </p>
+  </section> 
+  </section> <br>
+ 
+<p class = "section-p">And the result would again have been exactly the same as in the previous examples. <br><br>
+
+Preprocessor directives (those that begin by #) are out of this general rule since they are not statements. They are lines read and processed by the preprocessor before proper compilation begins. Preprocessor directives must be specified in their own line and, because they are not statements, do not have to end with a semicolon (;).
+</p>
+  
+  </section> 
+  
+<section id="sec4" class = "main-section">
+
+  <h1 class = "section-header">Variables</h1>
+  <hr class = "section-hr">
+  <p class = "section-p"> 
+  A statement such as x = 5; seems obvious enough. As you might guess, we are assigning the value of 5 to x. But what exactly is x? x is a variable. <br><br>
+
+A variable in C++ is simply an object that has a name. <br><br>
+
+In this section, we are only going to consider integer variables. An integer is a number that can be written without a fractional component, such as -12, -1, 0, 4, or 27. An integer variable is a variable that holds an integer value. <br><br>
+
+In order to create a variable, we generally use a special kind of declaration statement called a definition (we’ll explain the precise difference between a declaration and a definition later). Here’s an example of defining variable x as an integer variable (one that can hold integer values): <br><br>
+
+int x; <br><br>
+When this statement is executed by the CPU, a piece of memory from RAM will be set aside (called instantiation). For the sake of example, let’s say that the variable x is assigned memory location 140. Whenever the program sees the variable x in an expression or statement, it knows that it should look in memory location 140 to get the value. <br><br>
+
+One of the most common operations done with variables is assignment. To do this, we use the assignment operator, more commonly known as the = symbol. For example: <br><br>
+
+x = 5; <br><br>
+When the CPU executes this statement, it translates this to “put the value of 5 in memory location 140”. <br><br>
+
+Later in our program, we could print that value to the screen using std::cout: <br><br>
+
+
+std::cout << x;  // prints the value of x (memory location 140) to the console 
+  </p>
+  
+  </section>
+  
+<section id="sec5" class = "main-section">
+  <h1 class = "section-header">Initialization vs. assignment</h1>
+  <hr class = "section-hr">
+  <p class = "section-p">
+  C++ supports two related concepts that new programmers often get mixed up: assignment and initialization. <br><br>
+
+After a variable is defined, a value may be assigned to it via the assignment operator (the = symbol): <br><br>
+
+int x; // this is a variable definition <br>
+x = 5; // assign the value 5 to variable x <br> <br>
+C++ will let you both define a variable AND give it an initial value in the same step. This is called initialization. <br><br>
+
+
+int x = 5; // initialize variable x with the value 5 <br><br>
+A variable can only be initialized when it is defined. <br><br>
+
+Although these two concepts are similar in nature, and can often be used to achieve similar ends, we’ll see cases in future lessons where some types of variables require an initialization value, or disallow assignment. For these reasons, it’s useful to make the distinction now. </p>
+  
+
+  </section>
+  
+<section id ="sec6" class = "main-section">
+  <h1 class = "section-header">Uninitialized variables</h1>
+  <hr class = "section-hr">
+  <p class = "section-p"> 
+  Unlike some programming languages, C/C++ does not initialize most variables to a given value (such as zero) automatically. Thus when a variable is assigned a memory location by the compiler, the default value of that variable is whatever (garbage) value happens to already be in that memory location! A variable that has not been given a known value (through initialization or assignment) is called an uninitialized variable. <br><br>
+
+Note: Some compilers, such as Visual Studio, will initialize the contents of memory when you’re using a debug build configuration. This will not happen when using a release build configuration. <br><br>
+
+Using the values of uninitialized variables can lead to unexpected results. Consider the following short program: <br><br>
+
+// #include "stdafx.h" // Uncomment if Visual Studio user <br><br>
+#include < "iostream" > <br>
+ 
+int main() <br>
+{
+    // define an integer variable named x <br>
+    int x; // this variable is uninitialized<br>
+    
+    // print the value of x to the screen (who knows what we'll get, because x is uninitialized)<br>
+    std::cout << x;<br>
+ 
+    return 0;<br>
+}<br><br>
+In this case, the computer will assign some unused memory to x. It will then send the value residing in that memory location to std::cout, which will print the value. But what value will it print? The answer is “who knows!”, and the answer may change every time you run the program. When the author ran this program with the Visual Studio 2013 compiler, std::cout printed the value 7177728 one time, and 5277592 the next. <br><br>
+
+If you want to run this program yourself, make sure you’re using a release build configuration (see section 0.6a -- Build configurations for information on how to do that). Otherwise the above program may print whatever value your compiler is initializing memory with (Visual Studio uses -858993460).<br><br>
+
+If your compiler won’t let you run this program because it flags variable x as an uninitialized variable, here is a possible solution to get around this issue: <br>
+
+// #include "stdafx.h" // Uncomment if Visual Studio user <br>
+#include < "iostream" ><br>
+ 
+void doNothing(const int &x)<br>
+{<br>
+}<br>
+ 
+int main()<br>
+{<br>
+    // define an integer variable named x<br>
+    int x; // this variable is uninitialized<br>
+ 
+    doNothing(x); // make compiler think we're using this variable<br>
+ 
+    // print the value of x to the screen (who knows what we'll get, because x is uninitialized)<br>
+    std::cout << x;<br>
+ 
+    return 0;<br>
+}<br> <br>
+Using uninitialized variables is one of the most common mistakes that novice programmers make, and unfortunately, it can also be one of the most challenging to debug (because the program may run fine anyway if the uninitialized value happened to get assigned to a spot of memory that had a reasonable value in it, like 0). <br><br>
+
+Fortunately, most modern compilers will print warnings at compile-time if they can detect a variable that is used without being initialized. <br><br>
+  
+  </p>
+  </section>
+
+<section id="sec7" class = "main-section">7 
+   
+</section>
+
+<section id="sec8" class = "main-section">8
+  
+  <form id = "form" name="form1" action="https://www.freecodecamp.com/email-submit"> 
+  <label class = "form-element">Email Address:
+    <input id="email" class = "form-element" name="email" type = "email" placeholder = "ex@mail.com"> <label>
+  <input id = "submit" class ="form-button" type = "submit" name = "submit" value ="submit" form= "form1"> 
+  </section> 
+  </form>
+</main> 
+  </div>
+  </html>
